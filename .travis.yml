@@ -14,6 +14,7 @@ matrix:
 install:
 - bash ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
 - alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python"
+- alias pip="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/pip"
 - python --version
 - which python
 - which pip

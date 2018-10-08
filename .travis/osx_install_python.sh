@@ -28,10 +28,6 @@ wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 sudo installer -pkg ${DLD}/${PKG} -target /
 
 alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python"
-export PATH="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/:$PATH"
-echo $PATH
-
-/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python --version
 python --version
 
 # install latest version of pip
