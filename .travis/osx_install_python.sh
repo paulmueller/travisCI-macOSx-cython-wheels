@@ -25,7 +25,7 @@ PKG="python-${MPV}-macosx10.6.pkg"
 wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 
 # install MacPython
-installer -pkg ${DLD}/${PKG} -target /
+sudo installer -pkg ${DLD}/${PKG} -target /
 
 export PATH="/Library/Frameworks/Python.framework:$PATH"
 
