@@ -26,5 +26,12 @@ The pipeline includes:
 - Uploading the wheel to GitHub releases
 
 
+Notes:
+
+- All relevant scripts are located in the `.travis` directory.
+- The version of the `foo` package is determined from the current git tag and
+  wheels are named accordingly.
+
+
 .. |Build Status| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels.svg
    :target: https://travis-ci.org/paulmueller/travisCI-macOSx-cython-wheels/
