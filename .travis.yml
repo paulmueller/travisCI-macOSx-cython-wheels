@@ -16,7 +16,7 @@ matrix:
    language: python
    python: 3.7
 before_install:
-- source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $TRAVIS_PYTHON_VERSION
+- source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $MAC_PYTHON_VERSION
 install:
 - python --version
 - pip install -e .
