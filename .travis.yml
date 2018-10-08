@@ -12,10 +12,12 @@ matrix:
       env:
         - MAC_PYTHON_VERSION=2.7.9
 install:
-- bash ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
-- alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python${MPV::3}"
+- source ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
+-  ./.travis/.env/bin activate
 - python --version
 - pip --version
+- which python
+- which pip
 - python -m pip --version
 - python -m pip install -e .
 - python -m pip freeze

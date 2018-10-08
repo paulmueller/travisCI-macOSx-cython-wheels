@@ -1,6 +1,4 @@
 #!/bin/bash
-set -e
-
 # MacPython version
 MPV="$1"
 
@@ -27,12 +25,24 @@ wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 # install MacPython
 sudo installer -pkg ${DLD}/${PKG} -target /
 
-alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python"
-python --version
+export PATH="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/:$PATH"
+
+if [ ${MPV::1} == "3" ]; then
+    alias mypython = python3
+else
+    alias mypython = python
+fi
+mypython --version
 
 # install latest version of pip
 # (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
 curl https://bootstrap.pypa.io/get-pip.py -o ${DLD}/get-pip.py
-sudo python ${DLD}/get-pip.py
+sudo mypython ${DLD}/get-pip.py
+
+sudo mypython -m pip install virtualenv
+
+sudo mypthon -m virtualenv .env
+
+source .env/bin/activate
 
 cd $OLD
