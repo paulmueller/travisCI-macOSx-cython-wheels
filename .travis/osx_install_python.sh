@@ -27,16 +27,9 @@ wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 # install MacPython
 sudo installer -pkg ${DLD}/${PKG} -target /
 
-export PATH="/Library/Frameworks/Python.framework:$PATH"
+alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/python"
 
-which python
-
-# make Python3 the default if applicable
-if [ ${MPV::1} = "3" ]; then
-    alias python=python3
-fi
-
-which python
+python --version
 
 # install latest version of pip
 # (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
