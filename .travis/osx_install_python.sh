@@ -26,7 +26,6 @@ wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 sudo installer -pkg ${DLD}/${PKG} -target /
 
 # install latest version of pip
-# (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
 curl https://bootstrap.pypa.io/get-pip.py -o ${DLD}/get-pip.py
 python ${DLD}/get-pip.py
 
@@ -38,8 +37,9 @@ PP="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python${MPV::3}"
 python -m virtualenv --no-site-packages -p $PP .env
 source .env/bin/activate
 
-# install pip also in virtualenv
-python ${DLD}/get-pip.py
+# Update openssl for Python2.7
+# (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
+pip install requests[security]
 
 python --version
 
