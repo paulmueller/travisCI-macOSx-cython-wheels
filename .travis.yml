@@ -14,15 +14,13 @@ matrix:
 install:
 - source ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
 - python --version
-- pip --version
-- which python
-- which pip
-- python -m pip --version
-- python -m pip install -e .
-- python -m pip freeze
+- pip install -e .
+- pip freeze
 script:
 - python setup.py test
+- pip install delocate
 - python setup.py bdist_wheel
+- delocate-wheel dist/*.whl
 deploy:
   provider: releases
   api_key:
