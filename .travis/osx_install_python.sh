@@ -31,11 +31,11 @@ curl https://bootstrap.pypa.io/get-pip.py -o ${DLD}/get-pip.py
 sudo python ${DLD}/get-pip.py
 
 # install virtualenv
-sudo python -m pip install virtualenv
+python -m pip install virtualenv
 
 # create virtualenv
 PP="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python${MPV::3}"
-sudo python -m virtualenv --no-site-packages -p $PP .env
+python -m virtualenv --no-site-packages -p $PP .env
 source .env/bin/activate
 
 # install pip also in virtualenv
