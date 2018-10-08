@@ -14,7 +14,7 @@ matrix:
      - '2.7'
      - '3.6'
      - '3.7'
-before-install:
+before_install:
 - source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $TRAVIS_PYTHON_VERSION
 install:
 - python --version
@@ -22,7 +22,7 @@ install:
 - pip freeze
 script:
 - python setup.py test
-before-deploy:
+before_deploy:
 - bash ./.travis/${TRAVIS_OS_NAME}_build_wheel.sh
 deploy:
   provider: releases
