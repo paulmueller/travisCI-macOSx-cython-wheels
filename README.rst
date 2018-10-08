@@ -11,7 +11,7 @@ https://github.com/MacPython/wiki/wiki/Wheel-building.
 The pipeline includes:
 
 - Downloading and installing MacPython from https://www.python.org/ftp/python/
-  (The Python version has to be specified with the `MAC_PYTHON_VERSION`
+  (The Python version has to be specified with the `MAC_PYTHON_VERSION=X.Y.Z`
   environment variable in `.travis.yml`).
   I did not use homebrew or macports because python.org provides universal
   (in the sense that they are compatible with all OSx versions above 10.6)
