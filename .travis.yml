@@ -16,6 +16,7 @@ install:
 - python --version
 - which python
 - which pip
+- python -m pip 
 - pip install -e .
 - pip freeze
 script:

@@ -27,4 +27,9 @@ wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 # install MacPython
 sudo installer -pkg ${DLD}/${PKG} -target /
 
+# setup pip
+# (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+
 cd $OLD
