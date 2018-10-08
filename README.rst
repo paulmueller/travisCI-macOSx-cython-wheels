@@ -1,4 +1,6 @@
-# travisCI-macOSx-cython-wheels
+travisCI-macOSx-cython-wheels
+=============================
+
 Minimal setup for building Cython wheels for MacOSx on travisCI
 
 build status (updated monthly): |Build Status|
@@ -10,9 +12,10 @@ The pipeline includes
 - Building a cython extension for a basic .pyx script (`foo/bar.pyx`)
 - Running pytest
 - Building a wheel
+- Using delocate to make the wheel work everywhere
 - Uploading the wheel to GitHub releases
 
 
 
-.. |Build Status Linux| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels/
+.. |Build Status| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels/
    :target: https://travis-ci.org/paulmueller/travisCI-macOSx-cython-wheels/
