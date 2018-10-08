@@ -29,6 +29,15 @@ sudo installer -pkg ${DLD}/${PKG} -target /
 
 export PATH="/Library/Frameworks/Python.framework:$PATH"
 
+which python
+
+# make Python3 the default if applicable
+if [ ${MPV::1} = "3" ]; then
+    alias python=python3
+fi
+
+which python
+
 # install latest version of pip
 # (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
 curl https://bootstrap.pypa.io/get-pip.py -o ${DLD}/get-pip.py
