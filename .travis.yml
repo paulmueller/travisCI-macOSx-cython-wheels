@@ -16,9 +16,7 @@ install:
 - alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python"
 - alias pip="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/pip"
 - python --version
-- which python
-- which pip
-- python -m pip 
+- pip --version
 - pip install -e .
 - pip freeze
 script:
