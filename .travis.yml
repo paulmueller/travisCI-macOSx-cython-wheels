@@ -2,8 +2,9 @@ notifications:
   email: false
 sudo: required
 matrix:
+ include:
  - os: osx
-   language: generic
+   - language: generic
    - env:
      - MAC_PYTHON_VERSION=2.7
      - MAC_PYTHON_VERSION=3.6
