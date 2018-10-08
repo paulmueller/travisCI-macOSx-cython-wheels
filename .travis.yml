@@ -20,7 +20,8 @@ script:
 - python setup.py test
 - pip install delocate
 - python setup.py bdist_wheel
-- delocate-wheel dist/*.whl
+- delocate-listdeps dist/*.whl
+- delocate-wheel -v dist/*.whl
 deploy:
   provider: releases
   api_key:

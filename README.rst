@@ -23,5 +23,5 @@ The pipeline includes:
 - Uploading the wheel to GitHub releases
 
 
-.. |Build Status| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels/
+.. |Build Status| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels.svg
    :target: https://travis-ci.org/paulmueller/travisCI-macOSx-cython-wheels/
