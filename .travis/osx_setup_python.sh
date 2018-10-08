@@ -5,20 +5,20 @@ if [ -z $1 ]; then
     exit 1
 fi
 
-# previous directory
+# get previous directory
 OLD="$(pwd)"
 
-# directory of this script
+# get directory of this script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 cd $DIR
 
+# setup MacPython version management
 source osx_utils.sh
 
-# MacPython version
+# get MacPython version
 MPV="$(fill_pyver $1)"
 
-
-# download directory
+# create download directory
 DLD=${DIR}/dl_cache
 mkdir -p $DLD
 
@@ -41,4 +41,5 @@ PP="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python${MPV::3}"
 python -m virtualenv --no-site-packages -p $PP .env
 source .env/bin/activate
 
+# go back
 cd $OLD

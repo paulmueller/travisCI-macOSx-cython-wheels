@@ -7,6 +7,9 @@ It is not straight-forward to build Python wheels for MacOSx on travisCI.
 This repository is a minimum-working example with ideas taken from
 https://github.com/MacPython/wiki/wiki/Spinning-wheels and
 https://github.com/MacPython/wiki/wiki/Wheel-building.
+It is also demonstrated how an osx build could coexist with a linux build
+on travisCI`.
+
 
 The pipeline includes:
 
