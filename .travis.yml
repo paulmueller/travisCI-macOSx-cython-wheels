@@ -1,28 +1,25 @@
 notifications:
   email: false
 sudo: required
-matrix:
-  include:
-    - os: osx
-      language: generic
-      env:
-        - MAC_PYTHON_VERSION=3.6.4
-    - os: osx
-      language: generic
-      env:
-        - MAC_PYTHON_VERSION=2.7.15
+python:
+ - '2.7'
+ - '3.6'
+ - '3.7'
+os:
+ - osx
+ - linux
+language: python
 before-install:
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then source ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION ; fi
+- source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $TRAVIS_PYTHON_VERSION
 install:
 - python --version
 - pip install -e .
 - pip freeze
 script:
 - python setup.py test
-- python setup.py bdist_wheel
+
 before-deploy:
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then pip install delocate; fi
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then delocate-wheel -v dist/*.whl; fi
+- bash ./.travis/${TRAVIS_OS_NAME}_build_wheel.sh
 deploy:
   provider: releases
   api_key:
@@ -32,3 +29,4 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+    os: osx
