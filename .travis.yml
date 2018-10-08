@@ -1,0 +1,24 @@
+notifications:
+  email: false
+sudo: required
+cache:
+  directories:
+  # downloaded Python installer
+  - .travis/dl_cache
+matrix:
+  include:
+    - os: osx
+      language: generic
+      env:
+        - MAC_PYTHON_VERSION=3.6.4
+    - os: osx
+      language: generic
+      env:
+        - MAC_PYTHON_VERSION=2.7.9
+install:
+- source ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
+- pip install -e .
+- pip freeze
+script:
+- python setup.py test
+
