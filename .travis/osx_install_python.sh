@@ -35,7 +35,7 @@ sudo python -m pip install virtualenv
 
 # create virtualenv
 PP="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python${MPV::3}"
-sudo python -m virtualenv -p $PP .env
+sudo python -m virtualenv --no-site-packages -p $PP .env
 source .env/bin/activate
 
 # install pip also in virtualenv

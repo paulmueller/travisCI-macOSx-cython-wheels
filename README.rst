@@ -8,4 +8,5 @@ The pipeline includes
 - Building a cython extension for a basic .pyx script (`foo/bar.pyx`)
 - Running pytest
 - Building a wheel
+- Uploading the wheel to GitHub releases
 
