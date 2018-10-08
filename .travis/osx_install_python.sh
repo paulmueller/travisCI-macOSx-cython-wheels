@@ -30,6 +30,6 @@ sudo installer -pkg ${DLD}/${PKG} -target /
 # install latest version of pip
 # (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
 curl https://bootstrap.pypa.io/get-pip.py -o ${DLD}/get-pip.py
-python ${DLD}/get-pip.py
+sudo python ${DLD}/get-pip.py
 
 cd $OLD

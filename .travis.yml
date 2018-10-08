@@ -21,4 +21,11 @@ install:
 - pip freeze
 script:
 - python setup.py test
-
+- python setup.py bdist_wheel
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "dist/*.whl"
+  skip_cleanup: true
+  on:
+    tags: true
