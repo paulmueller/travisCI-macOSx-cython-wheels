@@ -6,6 +6,7 @@ Minimal setup for building Cython wheels for MacOSx on travisCI
 build status (updated monthly): |Build Status|
 
 The pipeline includes
+
 - Downloading and installing MacPython from https://www.python.org/ftp/python/
   (The Python version has to be specified with the `MAC_PYTHON_VERSION`
   environment variable).
