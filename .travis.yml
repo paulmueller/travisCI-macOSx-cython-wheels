@@ -14,7 +14,7 @@ matrix:
    env: MAC_PYTHON_VERSION=3.7
  - os: linux
    language: python
-   python: 3.7
+   python: 3.6
 before_install:
 - source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $MAC_PYTHON_VERSION
 install:
