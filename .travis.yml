@@ -13,9 +13,7 @@ matrix:
         - MAC_PYTHON_VERSION=2.7.9
 install:
 - bash ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
-- export PATH="/Library/Frameworks/Python.framework:$PATH"
-- type -a python
-- type -a python3
+- alias python="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python"
 - python --version
 - which python
 - which pip
