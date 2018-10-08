@@ -1,10 +1,6 @@
 notifications:
   email: false
 sudo: required
-cache:
-  directories:
-  # downloaded Python installer
-  - .travis/dl_cache
 matrix:
   include:
     - os: osx
