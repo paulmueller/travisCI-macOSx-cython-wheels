@@ -28,9 +28,9 @@ sudo installer -pkg ${DLD}/${PKG} -target /
 export PATH="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/:$PATH"
 
 if [ ${MPV::1} == "3" ]; then
-    alias mypython = python3
+    alias mypython=python3
 else
-    alias mypython = python
+    alias mypython=python
 fi
 mypython --version
 
