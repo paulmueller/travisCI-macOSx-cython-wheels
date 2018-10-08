@@ -22,6 +22,6 @@ mkdir -p $DLD
 
 # download MacPython
 PKG="python-${MPV}-macosx10.6.pkg"
-wget https://www.python.org/ftp/python/${MPV}/${PKG} -P ${DLD}
+wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 
 cd $OLD
