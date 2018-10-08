@@ -10,7 +10,7 @@ matrix:
     - os: osx
       language: generic
       env:
-        - MAC_PYTHON_VERSION=2.7.9
+        - MAC_PYTHON_VERSION=2.7.15
 install:
 - source ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
 - python --version
