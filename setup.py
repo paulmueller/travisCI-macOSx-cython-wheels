@@ -17,19 +17,10 @@ try:
 except:
     version = "unknown"
 
-
-# We don't need to cythonize if a .whl package is available.
-try:
-    import numpy as np
-except ImportError:
-    print("NumPy not available. Building extensions "+
-          "with this setup script will not work:", sys.exc_info())
-    extensions = []
-else:
-    extensions = [Extension("foo.bar",
-                            sources=["foo.bar.pyx"],
-                            include_dirs=[np.get_include()]
-                            )
+extensions = [Extension("foo.bar",
+                        sources=["foo/bar.pyx"],
+                        )
+              ]
 
 
 setup(
@@ -44,10 +35,9 @@ setup(
     license="MIT",
     description=description,
     long_description=open('README.rst').read() if exists('README.rst') else '',
-    install_requires=["numpy>=1.9.0"],
     ext_modules = extensions,
     keywords=["foo-bar"],
-    setup_requires=['cython'],
+    setup_requires=['cython', 'pytest-runner'],
+    tests_require=["pytest"],
     platforms=['ALL'],
     )
-
