@@ -37,10 +37,4 @@ PP="/Library/Frameworks/Python.framework/Versions/${MPV::3}/bin/python${MPV::3}"
 python -m virtualenv --no-site-packages -p $PP .env
 source .env/bin/activate
 
-# Update openssl for Python2.7
-# (avoids [SSL: TLSV1_ALERT_PROTOCOL_VERSION] errors)
-pip install requests[security]
-
-python --version
-
 cd $OLD
