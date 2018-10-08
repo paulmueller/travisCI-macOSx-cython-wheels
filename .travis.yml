@@ -17,6 +17,7 @@ matrix:
         - MAC_PYTHON_VERSION=2.7.9
 install:
 - bash ./.travis/osx_install_python.sh $MAC_PYTHON_VERSION
+- python --version
 - pip install -e .
 - pip freeze
 script:

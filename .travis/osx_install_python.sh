@@ -24,4 +24,5 @@ mkdir -p $DLD
 PKG="python-${MPV}-macosx10.6.pkg"
 wget -c -P ${DLD} https://www.python.org/ftp/python/${MPV}/${PKG}
 
+
 cd $OLD
