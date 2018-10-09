@@ -31,7 +31,7 @@ Notes:
 - All relevant scripts are located in the `.travis` directory.
 - The version of the `foo` package is determined from the current git tag and
   wheels are named accordingly.
-
+- Tested on osx 10.10.5 with the native Python2.7 installation.
 
 .. |Build Status| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels.svg
    :target: https://travis-ci.org/paulmueller/travisCI-macOSx-cython-wheels/
