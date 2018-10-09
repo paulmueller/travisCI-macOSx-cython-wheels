@@ -14,13 +14,13 @@ on travisCI.
 The pipeline includes:
 
 - Downloading and installing MacPython from https://www.python.org/ftp/python/
-  (The Python version has to be specified with the `MAC_PYTHON_VERSION=X.Y`
-  environment variable in `.travis.yml`).
+  (The Python version has to be specified with the ``MAC_PYTHON_VERSION=X.Y``
+  environment variable in ``.travis.yml``).
   I did not use homebrew or macports because python.org provides universal
   (in the sense that they are compatible with all osx versions above 10.6)
   MacPython installers that work on x64 and i386 systems.
 - Installing all package dependencies into a virtual environment
-- Building a cython extension for a basic .pyx script (`foo/bar.pyx`)
+- Building a cython extension for a basic .pyx script (``foo/bar.pyx``)
 - Running pytest
 - Building a wheel
 - Using delocate to make the wheel work everywhere
@@ -29,8 +29,8 @@ The pipeline includes:
 
 Notes:
 
-- All relevant scripts are located in the `.travis` directory.
-- The version of the `foo` package is determined from the current git tag and
+- All relevant scripts are located in the ``.travis`` directory.
+- The version of the ``foo`` package is determined from the current git tag and
   wheels are named accordingly.
 - Tested on osx 10.10.5 with the native Python2.7 installation.
 
