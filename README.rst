@@ -34,5 +34,5 @@ Notes:
   wheels are named accordingly.
 - Tested on osx 10.10.5 with the native Python2.7 installation.
 
-.. |Build Status| image:: http://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels.svg
+.. |Build Status| image:: https://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels.svg
    :target: https://travis-ci.org/paulmueller/travisCI-macOSx-cython-wheels/
