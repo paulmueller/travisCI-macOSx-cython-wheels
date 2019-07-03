@@ -1,3 +1,7 @@
+1.0.2
+ - setup script:
+   - avoid system python
+   - set matplotlib backend (just in case)
 1.0.1
  - update docs
 1.0.0
