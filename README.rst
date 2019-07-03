@@ -21,6 +21,7 @@ The pipeline includes:
   MacPython installers that work on x64 and i386 systems.
 - Installing all package dependencies into a virtual environment
 - Building a cython extension for a basic .pyx script (``foo/bar.pyx``)
+- Making sure that numpy gets installed as a build-dependency (pyproject.toml)
 - Running pytest
 - Building a wheel
 - Using delocate to make the wheel work everywhere

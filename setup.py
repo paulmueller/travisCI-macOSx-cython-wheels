@@ -20,6 +20,10 @@ except:
 
 extensions = [Extension("foo.bar",
                         sources=["foo/bar.pyx"],
+                        # If you don't rely on numpy, you can remove
+                        # the numpy import, the following line, the
+                        # numpy build-dependency in pyproject.toml, and
+                        # the install_requires key in setup().
                         include_dirs=[np.get_include()],
                         )
               ]
@@ -40,6 +44,7 @@ setup(
     ext_modules = extensions,
     keywords=["foo-bar"],
     setup_requires=["pytest-runner"],
+    install_requires=["numpy"],
     tests_require=["pytest"],
     python_requires='>=3.2, <4',
     platforms=['ALL'],
