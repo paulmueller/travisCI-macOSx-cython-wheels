@@ -1,5 +1,6 @@
 1.0.3
  - drop support for Python 2
+ - safe usage of numpy as a build dependency (pyproject.toml)
 1.0.2
  - setup script:
    - avoid system python

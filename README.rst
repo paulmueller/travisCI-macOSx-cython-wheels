@@ -23,6 +23,7 @@ The pipeline includes:
 - Building a cython extension for a basic .pyx script (``foo/bar.pyx``)
 - Making sure that numpy gets installed as a build-dependency (pyproject.toml)
 - Running pytest
+- Testing on both linux and macOS
 - Building a wheel
 - Using delocate to make the wheel work everywhere
 - Uploading the wheel to GitHub releases
