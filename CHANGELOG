@@ -1,3 +1,5 @@
+1.0.5
+ - simplify build by manually setting macOS versions
 1.0.4
  - move setup script into install section
 1.0.3
