@@ -23,7 +23,7 @@ matrix:
    language: python
    python: 3.6
 install:
-- source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $MAC_PYTHON_VERSION MAC_PYTHON_OSX_VERSION
+- source ./.travis/${TRAVIS_OS_NAME}_setup_python.sh $MAC_PYTHON_VERSION $MAC_PYTHON_OSX_VERSION
 - python --version
 - pip install -e .
 - pip freeze
