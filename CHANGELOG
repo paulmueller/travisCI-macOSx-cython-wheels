@@ -1,3 +1,6 @@
+1.0.6
+ - fix: use Agg instead of TkAgg by default (possible issues with
+   PyInstaller, PyQt5, and runtime hooks)
 1.0.5
  - simplify build by manually setting macOS versions
 1.0.4
