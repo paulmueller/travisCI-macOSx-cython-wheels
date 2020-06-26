@@ -37,4 +37,4 @@ Notes:
 - Tested on osx 10.10.5
 
 .. |Build Status| image:: https://img.shields.io/travis/paulmueller/travisCI-macOSx-cython-wheels.svg
-   :target: https://travis-ci.org/paulmueller/travisCI-macOSx-cython-wheels/
+   :target: https://travis-ci.com/paulmueller/travisCI-macOSx-cython-wheels/
